@@ -1,0 +1,6 @@
+[10-Apr-2017 09:45:03 Asia/Kolkata] PHP Warning:  include(connect.php): failed to open stream: No such file or directory in /home/ourmedia/public_html/merchants_admin_panel/startups_ads_sidebar.php on line 21
+[10-Apr-2017 09:45:03 Asia/Kolkata] PHP Warning:  include(connect.php): failed to open stream: No such file or directory in /home/ourmedia/public_html/merchants_admin_panel/startups_ads_sidebar.php on line 21
+[10-Apr-2017 09:45:03 Asia/Kolkata] PHP Warning:  include(): Failed opening 'connect.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/ourmedia/public_html/merchants_admin_panel/startups_ads_sidebar.php on line 21
+[10-Apr-2017 10:50:52 Asia/Kolkata] PHP Warning:  include(connect.php): failed to open stream: No such file or directory in /home/ourmedia/public_html/merchants_admin_panel/startups_ads_sidebar.php on line 21
+[10-Apr-2017 10:50:52 Asia/Kolkata] PHP Warning:  include(connect.php): failed to open stream: No such file or directory in /home/ourmedia/public_html/merchants_admin_panel/startups_ads_sidebar.php on line 21
+[10-Apr-2017 10:50:52 Asia/Kolkata] PHP Warning:  include(): Failed opening 'connect.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/ourmedia/public_html/merchants_admin_panel/startups_ads_sidebar.php on line 21

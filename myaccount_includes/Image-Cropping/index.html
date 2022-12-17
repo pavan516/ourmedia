@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jQuery Cropbox Plugin Demo</title>
+<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link href="src/jquery.cropbox.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+            div.cropbox .btn-file {
+                position: relative;
+                overflow: hidden;
+            }
+            div.cropbox .btn-file input[type=file] {
+                position: absolute;
+                top: 0;
+                right: 0;
+                min-width: 100%;
+                min-height: 100%;
+                font-size: 100px;
+                text-align: right;
+                filter: alpha(opacity=0);
+                opacity: 0;
+                outline: none;
+                background: white;
+                cursor: inherit;
+                display: block;
+            }
+            div.cropbox .cropped {
+                margin-top: 10px;
+            }
+            .syntaxhighlighter table .container:before {
+                display: none !important;
+            }
+            footer {
+                margin-top: 10px;
+                border-top: #cdcdcd 1px solid;
+            }
+            .container { margin:150px auto 30px auto;}
+        </style>
+</head>
+
+<body><div id="jquery-script-menu">
+<div class="jquery-script-center">
+<ul>
+<li><a href="http://www.jqueryscript.net/other/Lightweight-Image-Cropping-Plugin-with-jQuery-Cropbox.html">Download This Plugin</a></li>
+<li><a href="http://www.jqueryscript.net/">Back To jQueryScript.Net</a></li>
+</ul>
+<div class="jquery-script-ads"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-2783044520727903";
+/* jQuery_demo */
+google_ad_slot = "2780937993";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+<div class="jquery-script-clear"></div>
+</div>
+</div>
+<div class="container">
+<h1>jQuery Cropbox Plugin Demo</h1>
+ <div id="message" class="alert alert-info"></div> 
+            <div id="plugin" class="cropbox">
+                <div class="workarea-cropbox">
+                    <div class="bg-cropbox">
+                        <img class="image-cropbox">
+                        <div class="membrane-cropbox"></div>
+                    </div>
+                    <div class="frame-cropbox">
+                        <div class="resize-cropbox"></div>
+                    </div>
+                </div>
+              <div class="btn-group">
+                    <span class="btn btn-primary btn-file">
+                        <i class="glyphicon glyphicon-folder-open"></i>
+                        Browse <input type="file" accept="image/*">
+                    </span>
+                    <button type="button" class="btn btn-success btn-crop">
+                        <i class="glyphicon glyphicon-scissors"></i> Crop
+                    </button>
+                    <button type="button" class="btn btn-warning btn-reset">
+                        <i class="glyphicon glyphicon-repeat"></i> Reset
+                    </button>
+                </div>
+              <div class="cropped panel panel-default">
+                    <div class="panel-heading"><h3 class="panel-title">Result of cropping</h3></div>
+                    <div class="panel-body">...</div>
+                </div>
+                <div class="form-group">
+                    <label>Info of cropping</label>
+                    <textarea class="data form-control" rows="5"></textarea>
+                </div>
+            </div>
+</div>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.12/jquery.mousewheel.js"></script>
+<script src="src/jquery.cropbox.js"></script>
+<script>
+$('#plugin').cropbox({
+    selectors: {
+        inputInfo: '#plugin textarea.data',
+        inputFile: '#plugin input[type="file"]',
+        btnCrop: '#plugin .btn-crop',
+        btnReset: '#plugin .btn-reset',
+        resultContainer: '#plugin .cropped .panel-body',
+        messageBlock: '#message'
+    },
+    imageOptions: {
+        class: 'img-thumbnail',
+        style: 'margin-right: 5px; margin-bottom: 5px'
+    },
+    variants: [
+        {
+            width: 200,
+            height: 200,
+            minWidth: 180,
+            minHeight: 200,
+            maxWidth: 350,
+            maxHeight: 350
+        },
+        {
+            width: 150,
+            height: 200
+        }
+    ],
+    messages: [
+        'Crop a middle image.',
+        'Crop a small image.'
+    ]
+});
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
